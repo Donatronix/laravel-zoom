@@ -13,10 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sections', function (Blueprint $table) {
+        Schema::create('zoom_meetings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('class_id')->constrained();
-            $table->string('name');
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sections');
+        Schema::dropIfExists('zoom_meetings');
     }
 };
